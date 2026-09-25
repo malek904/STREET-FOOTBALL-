@@ -1322,6 +1322,71 @@ select, input, textarea {
 }
 
 </style> 
+
+<style id="street-football-new-ui">
+:root{
+  --sf-bg:#f5f7ff;--sf-card:#ffffff;--sf-text:#17213b;--sf-muted:#667085;
+  --sf-pink:#ff4f87;--sf-purple:#7657ff;--sf-blue:#3b82f6;--sf-cyan:#22c7d8;
+  --sf-yellow:#ffc94a;--sf-green:#20b486;--sf-shadow:0 12px 30px rgba(55,65,120,.12);
+}
+html{background:#f5f7ff!important}
+body{
+ background:
+ radial-gradient(circle at 10% 5%,rgba(255,79,135,.18),transparent 28%),
+ radial-gradient(circle at 92% 8%,rgba(59,130,246,.16),transparent 30%),
+ linear-gradient(145deg,#f8fbff 0%,#f7f2ff 48%,#fff8ed 100%)!important;
+ color:var(--sf-text)!important;
+}
+.container{background:rgba(255,255,255,.82)!important;border:1px solid rgba(118,87,255,.12)!important;box-shadow:var(--sf-shadow)!important;backdrop-filter:blur(14px)}
+.header{background:linear-gradient(135deg,#ff4f87,#7657ff)!important;border-radius:22px!important;box-shadow:0 10px 24px rgba(118,87,255,.22)!important}
+.header h1,.header p{color:#fff!important}
+.menu-btn-large{
+ color:#17213b!important;border:0!important;border-radius:20px!important;
+ box-shadow:0 9px 22px rgba(55,65,120,.11)!important;
+ transition:.2s!important;overflow:hidden;position:relative
+}
+.menu-btn-large:hover{transform:translateY(-2px)}
+.btn-menu-players{background:linear-gradient(135deg,#dce9ff,#f6f9ff)!important;border-left:6px solid #3b82f6!important}
+.btn-menu-divide{background:linear-gradient(135deg,#dffaf1,#f7fffc)!important;border-left:6px solid #20b486!important}
+.btn-menu-points{background:linear-gradient(135deg,#eee7ff,#fffaff)!important;border-left:6px solid #7657ff!important}
+.menu-btn-title{color:#17213b!important;font-weight:900!important}
+.menu-btn-desc{color:#667085!important}
+.menu-btn-arrow{color:#7657ff!important}
+.menu-btn-icon-wrapper{background:#fff!important;border:0!important;box-shadow:0 5px 14px rgba(55,65,120,.10)!important}
+.card,.scoreboard-card,.goal-log-card,.team-card,.player-data-container,.points-modal-container,.modal-content,.welcome-modal-card{
+ background:rgba(255,255,255,.94)!important;color:#17213b!important;border:1px solid rgba(118,87,255,.12)!important;
+ box-shadow:var(--sf-shadow)!important
+}
+.card-title,.pd-title,.team-title,.team-score-name,.welcome-text{color:#17213b!important}
+.player-checkbox,.player-row-card,.team-players li,.scorer-btn{
+ background:#f8f9fd!important;color:#17213b!important;border:1px solid #e8eaf2!important;border-radius:14px!important
+}
+.player-checkbox.selected{background:linear-gradient(135deg,#eee8ff,#e4f1ff)!important;border:2px solid #7657ff!important}
+.player-name,.player-row-card *,.team-players li *{color:#17213b!important}
+select,input,textarea{background:#fff!important;color:#17213b!important;border:1px solid #dfe3ee!important;border-radius:12px!important}
+select::placeholder,input::placeholder,textarea::placeholder{color:#98a1b5!important}
+.btn-pitch{background:linear-gradient(135deg,#7657ff,#5b7cff)!important}
+.btn-gk-order{background:linear-gradient(135deg,#22c7d8,#168fd0)!important}
+.btn-start-match{background:linear-gradient(135deg,#ff4f87,#ff704d)!important;box-shadow:0 8px 20px rgba(255,79,135,.25)!important}
+.btn-divide{background:linear-gradient(135deg,#20b486,#3bbf91)!important}
+.pitch-container{background:linear-gradient(145deg,#0d9b6f,#087b5c)!important;box-shadow:var(--sf-shadow)!important}
+.score-number{color:#17213b!important}
+.btn-back-to-setup{background:#fff!important;color:#17213b!important;border:1px solid #e3e6ef!important}
+.developer-info-box{background:#fff!important;color:#17213b!important;border:1px solid #e7e8f0!important}
+.dev-title{background:linear-gradient(90deg,#ff4f87,#7657ff)!important;-webkit-background-clip:text!important;-webkit-text-fill-color:transparent!important}
+.fut-card{filter:drop-shadow(0 12px 20px rgba(45,55,100,.18))}
+#app-loader{background:linear-gradient(135deg,#ff4f87,#7657ff)!important}
+@media(max-width:600px){
+ body{padding:8px 6px!important}
+ .container{padding:10px!important;border-radius:20px!important}
+ .header{border-radius:18px!important}
+ .menu-btn-large{border-radius:17px!important;padding:13px 11px!important}
+ .menu-btn-title{font-size:15px!important}
+ .menu-btn-desc{font-size:10px!important}
+ .card,.team-card,.scoreboard-card{border-radius:16px!important}
+}
+</style>
+
 </head> 
 <body> 
 
@@ -1420,7 +1485,7 @@ select, input, textarea {
       <div class="dev-content">
         <span>Developed by: Malek Sayed</span>
         <span>Assistant Developers: Abdo & Moaz</span>
-        <span>Version: 2.0</span>
+        <span>Version: 1.0</span>
         <span>Designed & Developed by Malek Sayed</span>
       </div>
     </div>
@@ -2167,20 +2232,6 @@ const defaultPlayers = [
     weakFoot: 3,
     avatar: "https://i.postimg.cc/RCJLSWJx/mʿadh.png",
     points: 10,
-    pos: "مهاجم"
-  },
-  {
-    displayName: "MUSA",
-    name: "MUSA",
-    knownAs: "",
-    age: "",
-    country: "",
-    dob: "",
-    foot: "Right",
-    skillMoves: 1,
-    weakFoot: 1,
-    avatar: "",
-    points: 7,
     pos: "مهاجم"
   }
 ];
